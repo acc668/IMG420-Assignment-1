@@ -1,0 +1,7 @@
+CanvasLayer (HUD)    [attach HUD.gd]
+└─ MarginContainer (anchor full; margin 12)
+   ├─ VBoxContainer
+   │  ├─ Label (name: DistanceLabel, text: "Distance: --")
+   │  ├─ Label (name: TimerLabel,    text: "Time: --")           # optional
+   │  └─ Label (name: StaminaLabel,  text: "Stamina: --")        # optional
+   └─ Label (name: PauseHint, text: "ESC = Pause", anchor: TR)
