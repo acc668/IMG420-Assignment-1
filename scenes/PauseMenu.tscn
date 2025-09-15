@@ -1,0 +1,9 @@
+CanvasLayer (PauseMenu)   [attach PauseMenu.gd, visible=false]
+└─ ColorRect (full rect, color: black 40% alpha)
+└─ CenterContainer
+   └─ VBoxContainer
+      ├─ Label  (text: "Paused")
+      ├─ Button (name: ResumeButton,  text: "Resume")
+      ├─ Button (name: RestartButton, text: "Restart")
+      ├─ Button (name: MainButton,    text: "Main Menu")
+      └─ Button (name: QuitButton,    text: "Quit")
