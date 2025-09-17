@@ -1,1 +1,59 @@
+[gd_scene load_steps=3 format=3]
 
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(12, 24)
+
+[sub_resource type="SpriteFrames" id="2"]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("2")
+animation = "idle"
+playing = true
+centered = true
+offset = Vector2(0, -6)
+
+[node name="WallRayLeft" type="RayCast2D" parent="."]
+position = Vector2(-6, -2)
+target_position = Vector2(-8, 0)
+enabled = true
+collide_with_areas = false
+collide_with_bodies = true
+
+[node name="WallRayRight" type="RayCast2D" parent="."]
+position = Vector2(6, -2)
+target_position = Vector2(8, 0)
+enabled = true
+collide_with_areas = false
+collide_with_bodies = true
+
+[node name="HeadRayLeft" type="RayCast2D" parent="."]
+position = Vector2(-6, -14)
+target_position = Vector2(-8, 0)
+enabled = true
+collide_with_areas = false
+collide_with_bodies = true
+
+[node name="HeadRayRight" type="RayCast2D" parent="."]
+position = Vector2(6, -14)
+target_position = Vector2(8, 0)
+enabled = true
+collide_with_areas = false
+collide_with_bodies = true
+
+[node name="JumpSFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="DashSFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
+
+[node name="HitSFX" type="AudioStreamPlayer" parent="."]
+bus = &"SFX"
