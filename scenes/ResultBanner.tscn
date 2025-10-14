@@ -1,6 +1,0 @@
-CanvasLayer (ResultBanner) [attach ResultBanner.gd, visible=false]
-└─ CenterContainer
-   └─ VBoxContainer
-      ├─ Label (name: Title, text: "You Win!")
-      ├─ Button (name: RestartButton, text: "Restart")
-      └─ Button (name: MainButton,    text: "Main Menu")

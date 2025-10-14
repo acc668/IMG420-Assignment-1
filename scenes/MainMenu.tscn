@@ -1,6 +1,0 @@
-CanvasLayer (MainMenu)  [attach MainMenu.gd]
-└─ CenterContainer
-   └─ VBoxContainer
-      ├─ Label        (text: Your Game Title, theme: big/bold)
-      ├─ Button       (name: StartButton, text: Start)
-      └─ Button       (name: QuitButton,  text: Quit)
