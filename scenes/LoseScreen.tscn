@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://g6tf80wvfk8n"]
+
+[ext_resource type="Script" uid="uid://7cg3p1xt788g" path="res://scripts/LoseScreen.gd" id="1_5ma5d"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5ma5d")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 247.0
+offset_right = 613.0
+offset_bottom = 270.0
+text = "You Lose!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 382.0
+offset_right = 630.0
+offset_bottom = 413.0
+text = "Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

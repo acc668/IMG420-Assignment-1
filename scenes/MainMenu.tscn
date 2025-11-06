@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1krlkphsev84"]
+
+[ext_resource type="Script" uid="uid://bt6e4ffietd7f" path="res://scripts/MainMenu.gd" id="1_yqorp"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_yqorp")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 242.0
+offset_right = 631.0
+offset_bottom = 265.0
+text = "Assignment 1"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 392.0
+offset_right = 633.0
+offset_bottom = 423.0
+text = "Start Game"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
